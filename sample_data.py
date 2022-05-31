@@ -1,9 +1,10 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import collections
+"""
+In this file we preprocess the original Student Alcohol Consumption dataset, meaning that we bin some of the variables
+of interest and randomly sample 856 of the students (half male, half female) whose grade is not equal to 0.
+"""
 
-#columns of interest: ['sex', 'studytime', 'freetime', 'romantic', 'Walc', 'goout', 'Parents_edu', 'absences', 'reason']
+import pandas as pd
+
 
 def load_data():
     maths_performance = pd.read_csv('student-mat.csv')

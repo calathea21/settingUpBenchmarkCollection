@@ -1,8 +1,13 @@
+"""
+In sample_data.py we preprocessed and sampled the data we want to present in the experiment. In this file we
+put all of the data in a .txt file and format it such that it can be loaded directly into Qualtrics
+"""
+
 import pandas as pd
-import numpy as np
 import random
 random.seed(2)
 from sample_data import create_list_of_blocks
+
 
 def reason_to_text(reason_indicator):
     if reason_indicator=='home':
@@ -149,19 +154,6 @@ def create_one_block(block, block_id, dataframe):
     girl_names = ["Anna", "Sarah", "Lisa", "Jenny"]
     boy_names = ["Michael", "Brian", "David", "Oliver"]
     available_indices = [0, 1, 2, 3, 4, 5, 6, 7]
-
-    # block_text = "[[Question: RankOrder]]\n"
-    # block_text += "[[ID: Block" + str(block_id) + "]]\n"
-    # block_text += "Below we present you with all student profiles. Please take some time to look at them and afterwards " \
-    #               "rank them according to how well you expect the students to perform in the English exam. " \
-    #               "Start with the student you think will get the highest grade. <br>" \
-    #               "You can use your mouse/touchscreen to drag and drop the student names." \
-    #               "For each student also specify in the blank field which grade you think they'll get. " \
-    #               "The grades range between 1 and 20 (10 being the minimum passing grade), and the expected " \
-    #               "passing rate for this exam is 70-80%. <br>" \
-    #               "Remember to completely follow your intuition and to not overthink your predictions.<br> \n"
-    # block_text += "[[Choices]]\n"
-    # block_text += "Anna\nSarah\nJenny\nLisa\nBrian\nMichael\nDavid\nOliver\n"
 
     block_text = "[[Question: DB]]\n"
     block_text += "[[ID:" + str(block_id) + "a]]\n"
