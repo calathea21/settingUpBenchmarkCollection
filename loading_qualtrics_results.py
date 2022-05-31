@@ -137,7 +137,6 @@ def find_biased_instances(block_info):
     block_info.dropna(subset=["PredictedGrade"], inplace=True)
 
     block_info["Predicted_Pass"] = block_info["PredictedGrade"] >= 10
-cd 
     boys_data = block_info[block_info["sex"] == 'M']
     print("Number of boys made predictions for: " + str(len(boys_data)))
 
